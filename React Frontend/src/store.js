@@ -7,7 +7,7 @@ const initialState = {
     password: '',
     jobs: [],
     dashboard: {
-        jobStatus: 'All', // Renamed from 'jobstatus' to 'jobStatus'
+        jobStatus: 'All',
         jobs: [],
         total_pages: 0
     },
@@ -45,7 +45,7 @@ export const dashboard = (jobStatus, total_pages, jobs) => ({
     payload: {
         dashboard: {
             jobs,
-            jobStatus,  // Renamed here as well
+            jobStatus,
             total_pages
         }
     },
@@ -75,7 +75,7 @@ const userReducer = (state = initialState, action) => {
                 dashboard: {
                     ...state.dashboard,
                     jobs: action.payload.dashboard.jobs,
-                    jobStatus: action.payload.dashboard.jobStatus, // Use renamed jobStatus here
+                    jobStatus: action.payload.dashboard.jobStatus,
                     total_pages: action.payload.dashboard.total_pages,
                 },
             };

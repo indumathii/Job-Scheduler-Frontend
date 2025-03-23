@@ -96,7 +96,7 @@ const WebSocketComponent = () => {
             }
 
             if (data.action === "get_filtered_jobs" && data.jobs) {
-                // Handle filtered jobs (for the table)
+
                 setJobs(data.jobs);
                 console.log("jobs for table", jobs)
                 setTotalPages(data.total_pages || 1);
@@ -218,9 +218,9 @@ const WebSocketComponent = () => {
             {/* Pie Chart */}
             <div className='d-flex col-12 col-md-8 flex-column flex-md-row w-100'>
                 <div className='d-flex col-12 col-md-8 flex-column flex-md-row w-100'>
-                    <div className='d-flex m-3 m-md-5 me-3 flex-column'>
+                    <div className='d-flex m-3  me-3 flex-column'>
                         <h2 className="d-flex ms-1 ms-md-5 mb-2 fw-bold" style={{ color: '#6709d1' }}>Job Status Distribution</h2>
-                        <PieChart width={300} height={400}>
+                        <PieChart width={400} height={400}>
                             <Pie
                                 data={piechartData}
                                 dataKey="value"

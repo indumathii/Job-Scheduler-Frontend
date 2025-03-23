@@ -58,12 +58,7 @@ const Register = () => {
         const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
         await sleep(1000)
         console.log("printing from local storage", JSON.parse(window.localStorage.getItem('user-state')))
-        if (responsemessage) {
-            //const jobs = await joblisting(dispatch)
-            //dispatch(jobload(jobs))
-            console.log("responsemessage of REgister", responsemessage)
-            //navigate('/Scheduler');
-        }
+
     }
 
 
